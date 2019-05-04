@@ -37,7 +37,7 @@ def data():
 def save():
     req_data = request.get_json(force=True)
     write_data(req_data)
-    return make_response('Success', 200)
+    return make_response('', 200)
 
 
 
