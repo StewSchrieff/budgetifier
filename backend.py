@@ -1,5 +1,6 @@
 from flask import Flask
 import pandas as pd
+from flask_cors import CORS
 
 def init():
     print('starting backend by reading data')
@@ -16,6 +17,7 @@ def init():
     return debit_df
 
 app = Flask(__name__)
+CORS(app)
 df = init()
 
 @app.route("/getData")
